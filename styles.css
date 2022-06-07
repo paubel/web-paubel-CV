@@ -23,12 +23,14 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000; /*remove?*/
-  padding-top: 4vh;
-  padding-bottom: 4vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
   font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 1rem;
   background-color: blue;
 }
 
@@ -71,8 +73,50 @@ section {
 section.sec-div {
   margin: 2vh 1vw;
 }
-section p {
+
+.sec-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sec-div h2 {
+  grid-column-start: span 2;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1rem;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  .sec-div {
+    grid-template-columns: 1fr;
+  }
+  .sec-div h2 {
+    grid-column-start: 1;
+    text-align: center;
+  }
+
+  .sec-div img {
+    justify-self: center;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+section section p {
   margin: 1rem 0;
+}
+.sec-div img {
+  width: 400px;
 }
 
 /* :where(.sec-div > :not(:first-child)) {
