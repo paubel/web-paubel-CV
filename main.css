@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #1e1a20;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+/* html,
+body
+{
+    overflow: hidden;
+} */
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+nav {
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  position: sticky;
+  padding: 1vh 0;
+  z-index: 9999;
+  background-color: #1e1a20;
+  box-shadow: 1px 19px 13px #1e1a20;
+}
+nav a {
+  margin: 1vh 3vw;
+  padding: 1vmin 3vmin;
+  /* https://www.bestcssbuttongenerator.com/#/36 */
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #a7a6a6 100%);
+  background-color: #ededed;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #040404;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 2vmin;
+  font-weight: bold;
+
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+nav a:hover {
+  background: linear-gradient(to bottom, #a7a6a6 5%, #ededed 100%);
+}
+
+nav a:active {
+  top: 1px;
+  position: relative;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  color: #ffeded;
+  font-size: 3vmin;
+  padding-left: 5%;
+  padding-right: 5%;
+  /*   background: hsla(0, 0%, 42%, 0.5); */
+  margin: 10vh;
+  /*  box-shadow: 0px 0px 15px hsla(0, 0%, 42%, 1); */
+}
+
+.section .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: hsla(0, 0%, 42%, 0.7);
+  padding: 2.5vmin;
+  border-radius: 5vmin;
+  margin-top: 15vh;
+  box-shadow: 0px 0px 15px hsla(0, 0%, 42%, 1);
+}
+.section .container h2 {
+  grid-column-start: span 2;
+}
+.section .container img {
+  width: 100%;
+}
+
+.section p {
+  font-size: 2.5vmin;
+}
+#sec1 .container {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 600px) {
+  .section .container {
+    grid-template-columns: 1fr;
+  }
+  .section .container h2 {
+    grid-column: 1;
+  }
+}
+
+#sec1,
+#sec3,
+#sec2,
+#sec4 {
+  margin-right: 2vmin;
+  margin-left: 2vmin;
+}
+
+.fa-brands {
+  color: white;
+  text-decoration: none;
+  font-size: 9vmin;
+}
+
+.fa-brands:hover {
+  top: -1px;
+  position: relative;
+  color: #ededed;
+  /*   box-shadow: 0px 0px 15px rgb(218, 218, 218); */
+}
+
+.fa-brands:active {
+  top: 1px;
+  color: #a7a6a6;
+  position: relative;
+}
+/* section:nth-child(odd) {
+  justify-content: flex-end;
+} */
+
+
+/*# sourceMappingURL=main.css.map*/
